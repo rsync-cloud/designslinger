@@ -3,8 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DesignSlinger.com – Premium Domain for Sale</title>
-  <!-- Three.js from CDN -->
+  
+  <!-- SEO & AI Meta -->
+  <title>DesignSlinger.com - Premium Brandable Domain for Sale</title>
+  <meta name="description" content="Own the rare, memorable domain DesignSlinger.com. Perfect for a design agency, creative portfolio, or SaaS brand. Serious inquiries only. Buy this brandable domain today." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://designslinger.com" />
+  
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="DesignSlinger.com - Premium Domain for Sale" />
+  <meta property="og:description" content="A rare brandable domain for creatives. Make it yours." />
+  <meta property="og:url" content="https://designslinger.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://designslinger.com/og-image.jpg" /> <!-- Replace with your preview image URL -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Structured Data for Search & AI (Domain Product + FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "DesignSlinger.com Domain Name",
+    "description": "Premium brandable domain name for sale. Ideal for design studios, creative agencies, or design tools.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "USD",
+      "url": "https://designslinger.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is DesignSlinger.com a valuable domain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DesignSlinger.com is a short, memorable, and brandable .com domain that instantly communicates creativity, speed, and precision - perfect for a design agency, freelance portfolio, or design tool. Premium .com domains are rare and increase trust and SEO value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I purchase this domain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can fill out the inquiry form on this page, or contact us directly via email or WhatsApp. We will respond within 24 hours to discuss the price and transfer process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the domain transfer safe and secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We use GoDaddy's domain transfer process, which is secure and protects both buyer and seller. Escrow services can also be used for larger transactions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Three.js -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
   <script type="importmap">
     {
       "imports": {
@@ -12,6 +78,7 @@
       }
     }
   </script>
+
   <style>
     * {
       margin: 0;
@@ -24,10 +91,9 @@
       background: #0a0a0a;
       color: #f0f0f0;
       overflow-x: hidden;
-      cursor: default;
     }
 
-    /* 3D canvas as background */
+    /* 3D Canvas Background */
     #bg-canvas {
       position: fixed;
       top: 0;
@@ -35,7 +101,19 @@
       width: 100vw;
       height: 100vh;
       z-index: 0;
-      pointer-events: none; /* let mouse events pass through to the page */
+      pointer-events: none;
+    }
+
+    /* Cursor Trail Canvas */
+    #cursor-trail {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 3;
+      pointer-events: none;
+      mix-blend-mode: screen;
     }
 
     .overlay {
@@ -44,7 +122,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(10,10,10,0.85) 90%);
+      background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(10,10,10,0.88) 90%);
       z-index: 1;
       pointer-events: none;
     }
@@ -63,16 +141,17 @@
       text-align: center;
     }
 
-    /* Hero section */
+    /* Hero Section */
     .hero {
       margin-bottom: 4rem;
       animation: fadeUp 1s ease-out;
     }
 
+    /* Pulsing badge */
     .badge {
       display: inline-block;
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,179,71,0.5);
       backdrop-filter: blur(10px);
       padding: 0.5rem 1.5rem;
       border-radius: 50px;
@@ -81,26 +160,44 @@
       text-transform: uppercase;
       margin-bottom: 1.5rem;
       color: #ffb347;
+      animation: pulseBadge 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(255,179,71,0.3);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255,179,71,0.7), 0 0 60px rgba(255,107,107,0.5);
+        transform: scale(1.03);
+      }
     }
 
     h1 {
-      font-size: clamp(3rem, 10vw, 7rem);
+      font-size: clamp(2.5rem, 8vw, 5rem);
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.2;
       background: linear-gradient(135deg, #ffb347, #ff6b6b, #d4a5ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 1rem;
       letter-spacing: -0.02em;
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+    h1:hover {
+      transform: scale(1.02);
     }
 
     .subtitle {
-      font-size: 1.4rem;
-      color: rgba(255,255,255,0.7);
-      max-width: 600px;
+      font-size: 1.2rem;
+      color: #e5e5e5;
+      max-width: 650px;
       margin: 0 auto 2rem;
       font-weight: 300;
+      text-shadow: 0 0 8px rgba(255,179,71,0.15);
     }
 
     .btn {
@@ -117,17 +214,16 @@
       cursor: pointer;
       border: none;
     }
-
     .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 0 50px rgba(255,179,71,0.5);
     }
 
-    /* Form section */
+    /* Form Section */
     .form-section {
       width: 100%;
       max-width: 600px;
-      background: rgba(20,20,20,0.8);
+      background: rgba(20,20,20,0.75);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 24px;
@@ -135,6 +231,11 @@
       margin: 2rem 0;
       animation: fadeUp 1s ease-out 0.3s both;
       text-align: left;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .form-section:hover {
+      border-color: rgba(255,179,71,0.3);
+      box-shadow: 0 0 30px rgba(255,179,71,0.1);
     }
 
     .form-section h2 {
@@ -142,7 +243,6 @@
       margin-bottom: 0.5rem;
       color: #ffb347;
     }
-
     .form-section p {
       color: rgba(255,255,255,0.6);
       margin-bottom: 2rem;
@@ -150,8 +250,8 @@
 
     .form-group {
       margin-bottom: 1.5rem;
+      position: relative;
     }
-
     label {
       display: block;
       font-size: 0.85rem;
@@ -161,7 +261,9 @@
       margin-bottom: 0.5rem;
       color: rgba(255,255,255,0.8);
     }
-
+    .required-star {
+      color: #ff6b6b;
+    }
     input, textarea {
       width: 100%;
       padding: 1rem 1.2rem;
@@ -170,23 +272,18 @@
       border-radius: 12px;
       color: white;
       font-size: 1rem;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
       outline: none;
       font-family: inherit;
     }
-
     input:focus, textarea:focus {
       border-color: #ffb347;
       background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 15px rgba(255,179,71,0.2);
     }
-
     textarea {
       min-height: 120px;
       resize: vertical;
-    }
-
-    .required-star {
-      color: #ff6b6b;
     }
 
     .btn-submit {
@@ -197,22 +294,132 @@
       font-weight: 700;
       font-size: 1.1rem;
       margin-top: 1rem;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
-
     .btn-submit:hover {
-      box-shadow: 0 0 40px rgba(255,107,107,0.5);
+      box-shadow: 0 0 40px rgba(255,107,107,0.6);
+      transform: translateY(-2px);
     }
 
-    .contact-info {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.5);
+    .form-response {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 12px;
+      font-weight: 500;
       text-align: center;
     }
 
-    .contact-info a {
+    /* Direct Contact Block */
+    .direct-contact {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(20,20,20,0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      animation: fadeUp 1s ease-out 0.5s both;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .direct-contact:hover {
+      border-color: rgba(255,179,71,0.3);
+      box-shadow: 0 0 30px rgba(255,179,71,0.1);
+    }
+    .direct-contact h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
       color: #ffb347;
+      font-weight: 600;
+    }
+    .direct-contact p {
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1.8rem;
+      font-size: 0.95rem;
+    }
+    .direct-contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+    .direct-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 0.9rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #fff;
       text-decoration: none;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+    }
+    .direct-btn:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: #ffb347;
+      box-shadow: 0 0 25px rgba(255,179,71,0.4);
+      transform: translateY(-2px);
+    }
+    .direct-btn .icon {
+      font-size: 1.4rem;
+    }
+    .direct-btn.whatsapp {
+      border-color: rgba(37,211,102,0.3);
+    }
+    .direct-btn.whatsapp:hover {
+      border-color: #25d366;
+      box-shadow: 0 0 25px rgba(37,211,102,0.4);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      width: 100%;
+      max-width: 600px;
+      background: rgba(20,20,20,0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      margin: 2rem 0;
+      text-align: left;
+      animation: fadeUp 1s ease-out 0.7s both;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .faq-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #ffb347;
+      text-align: center;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+    .faq-answer {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    @media (min-width: 500px) {
+      .direct-contact-buttons {
+        flex-direction: row;
+        gap: 1.2rem;
+      }
+      .direct-btn {
+        flex: 1;
+      }
     }
 
     footer {
@@ -222,48 +429,35 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Custom crosshair cursor on the canvas area (subtle) */
-    .custom-cursor-area {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
-      pointer-events: none;
-      mix-blend-mode: difference;
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
-      .form-section {
+      .form-section,
+      .direct-contact,
+      .faq-section {
         padding: 2rem 1.2rem;
       }
       h1 {
-        font-size: 2.8rem;
+        white-space: normal;
+        font-size: clamp(2rem, 10vw, 4rem);
       }
     }
   </style>
 </head>
 <body>
-  <!-- 3D Canvas -->
+  <!-- 3D Background -->
   <canvas id="bg-canvas"></canvas>
+  <!-- Interactive Cursor Trail -->
+  <canvas id="cursor-trail"></canvas>
   <div class="overlay"></div>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <div class="content">
     <div class="hero">
       <div class="badge">🚀 Premium Domain for Sale</div>
-      <h1>DESIGNSLINGER<br>.COM</h1>
+      <h1>DESIGNSLINGER.COM</h1>
       <p class="subtitle">
         A rare, brandable domain for a creative agency, design tool, or
         personal portfolio. Sling your best work with a name that sticks.
@@ -271,49 +465,82 @@
       <a href="#contact-form" class="btn">Make an Offer</a>
     </div>
 
-    <!-- Contact Form Section -->
+    <!-- Inquiry Form -->
     <div id="contact-form" class="form-section">
       <h2>Inquire to Purchase</h2>
-      <p>
-        All fields are mandatory. Serious inquiries only. We'll respond
-        within 24 hours.
-      </p>
-      <form id="purchase-form">
+      <p>All fields are mandatory. Serious inquiries only - we respond within 24 hours.</p>
+      
+      <!-- 👇 REPLACE WITH YOUR FORMSPREE ENDPOINT 👇 -->
+      <form id="purchase-form" action="https://formspree.io/f/maqglkew" method="POST" novalidate>
         <div class="form-group">
           <label for="name">Full Name <span class="required-star">*</span></label>
-          <input type="text" id="name" name="name" required placeholder="John Doe" />
+          <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name" />
         </div>
         <div class="form-group">
           <label for="email">Email Address <span class="required-star">*</span></label>
-          <input type="email" id="email" name="email" required placeholder="john@example.com" />
+          <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email" />
         </div>
         <div class="form-group">
           <label for="phone">Phone Number <span class="required-star">*</span></label>
-          <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" />
+          <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" autocomplete="tel" />
         </div>
         <div class="form-group">
           <label for="message">Your Message / Offer <span class="required-star">*</span></label>
           <textarea id="message" name="message" required placeholder="I'm interested in acquiring DesignSlinger.com..."></textarea>
         </div>
         <button type="submit" class="btn btn-submit">Send Inquiry</button>
+        <div class="form-response" id="form-response-msg"></div>
       </form>
-      <div class="contact-info">
-        Or email directly:
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
-        <br /><small>(replace with your real contact email)</small>
+    </div>
+
+    <!-- Direct Contact Block -->
+    <div class="direct-contact">
+      <h3>📱 Prefer to Reach Out Directly?</h3>
+      <p>Skip the form - use the options below to get in touch instantly.</p>
+      <div class="direct-contact-buttons">
+        <!-- 👇  EMAIL 👇 -->
+        <a href="mailto:rsync127001@gmail.com" class="direct-btn">
+          <span class="icon">✉️</span> Email Us
+        </a>
+        <!-- 👇 WHATSAPP WITH YOUR FULL INTERNATIONAL NUMBER (no spaces, no +) 👇 -->
+        <a href="https://wa.me/923227934679?text=Hi%20DesignSlinger%2C%20I'd%20like%20to%20know%20more%20about%20your%20domain%20DesignsSlinger.com" target="_blank" class="direct-btn whatsapp">
+          <span class="icon">💬</span> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FAQ Section (AEO / GEO optimized) -->
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">❓ Why is DesignSlinger.com valuable?</div>
+        <div class="faq-answer">
+          It’s a short, memorable, brandable .com that screams creativity and speed - ideal for a design agency, freelance portfolio, or SaaS tool. Premium .com domains are rare and boost SEO and trust.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">💰 How can I buy this domain?</div>
+        <div class="faq-answer">
+          Simply fill out the form above or contact us directly via email/WhatsApp [rsync127001@gmail.com / +923227934679] We’ll reply within 24 hours to discuss pricing and a secure transfer.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">🔒 Is the transfer process safe?</div>
+        <div class="faq-answer">
+          Absolutely. We use GoDaddy’s secure domain transfer, and for larger deals we can use trusted escrow services. You’re protected every step of the way.
+        </div>
       </div>
     </div>
 
     <footer>
-      &copy; 2026 DesignSlinger.com – All rights reserved.
+      &copy; 2026 DesignSlinger.com - All rights reserved.
     </footer>
   </div>
 
-  <!-- Three.js scene script -->
+  <!-- 3D Scene Script -->
   <script type="module">
     import * as THREE from 'three';
 
-    // ----- SCENE SETUP -----
     const canvas = document.getElementById('bg-canvas');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -321,115 +548,74 @@
     renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     const scene = new THREE.Scene();
-
-    // Camera
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.set(0, 0.5, 5);
     camera.lookAt(0, 0, 0);
 
-    // Lights
-    const ambientLight = new THREE.AmbientLight(0x404066);
-    scene.add(ambientLight);
-    const dirLight1 = new THREE.DirectionalLight(0xffb347, 1.2);
-    dirLight1.position.set(1, 2, 2);
-    scene.add(dirLight1);
-    const dirLight2 = new THREE.DirectionalLight(0xff6b6b, 0.8);
-    dirLight2.position.set(-1.5, -0.5, -1);
-    scene.add(dirLight2);
-    const backLight = new THREE.DirectionalLight(0xd4a5ff, 0.5);
-    backLight.position.set(0, -0.5, -2);
-    scene.add(backLight);
+    const ambient = new THREE.AmbientLight(0x404066);
+    scene.add(ambient);
+    const dir1 = new THREE.DirectionalLight(0xffb347, 1.2);
+    dir1.position.set(1, 2, 2);
+    scene.add(dir1);
+    const dir2 = new THREE.DirectionalLight(0xff6b6b, 0.8);
+    dir2.position.set(-1.5, -0.5, -1);
+    scene.add(dir2);
+    const dir3 = new THREE.DirectionalLight(0xd4a5ff, 0.5);
+    dir3.position.set(0, -0.5, -2);
+    scene.add(dir3);
 
-    // ----- REVOLVER CYLINDER (Gunslinger vibe) -----
-    const cylinderGroup = new THREE.Group();
-
-    // Central axis (small shiny rod)
+    // Revolver cylinder
+    const cylGroup = new THREE.Group();
     const axisGeo = new THREE.CylinderGeometry(0.12, 0.12, 2.5, 32);
-    const axisMat = new THREE.MeshStandardMaterial({
-      color: 0xccccdd,
-      roughness: 0.2,
-      metalness: 0.9
-    });
+    const axisMat = new THREE.MeshStandardMaterial({ color: 0xccccdd, roughness: 0.2, metalness: 0.9 });
     const axis = new THREE.Mesh(axisGeo, axisMat);
-    cylinderGroup.add(axis);
+    cylGroup.add(axis);
 
-    // Main chamber body (a larger cylinder with rounded edges)
     const chamberGeo = new THREE.CylinderGeometry(0.85, 0.85, 1.4, 64);
-    const chamberMat = new THREE.MeshStandardMaterial({
-      color: 0x2a2a35,
-      roughness: 0.25,
-      metalness: 0.95
-    });
+    const chamberMat = new THREE.MeshStandardMaterial({ color: 0x2a2a35, roughness: 0.25, metalness: 0.95 });
     const chamber = new THREE.Mesh(chamberGeo, chamberMat);
-    chamber.position.y = 0;
-    cylinderGroup.add(chamber);
+    cylGroup.add(chamber);
 
-    // Create 6 bullet chambers around the perimeter
-    const bulletChamberCount = 6;
+    const bulletCount = 6;
     const radius = 0.65;
-    for (let i = 0; i < bulletChamberCount; i++) {
-      const angle = (i / bulletChamberCount) * Math.PI * 2;
+    for (let i = 0; i < bulletCount; i++) {
+      const angle = (i / bulletCount) * Math.PI * 2;
       const x = Math.cos(angle) * radius;
       const z = Math.sin(angle) * radius;
 
-      // Bullet chamber (hole)
       const holeGeo = new THREE.CylinderGeometry(0.15, 0.15, 1.3, 16);
-      const holeMat = new THREE.MeshStandardMaterial({
-        color: 0x111122,
-        roughness: 0.5,
-        metalness: 0.8
-      });
+      const holeMat = new THREE.MeshStandardMaterial({ color: 0x111122, roughness: 0.5, metalness: 0.8 });
       const hole = new THREE.Mesh(holeGeo, holeMat);
       hole.position.set(x, 0, z);
-      cylinderGroup.add(hole);
+      cylGroup.add(hole);
 
-      // Bullet casing (golden)
       const casingGeo = new THREE.CylinderGeometry(0.13, 0.13, 0.5, 16);
-      const casingMat = new THREE.MeshStandardMaterial({
-        color: 0xffaa00,
-        roughness: 0.3,
-        metalness: 0.9,
-        emissive: 0x331100,
-        emissiveIntensity: 0.4
-      });
+      const casingMat = new THREE.MeshStandardMaterial({ color: 0xffaa00, roughness: 0.3, metalness: 0.9, emissive: 0x331100, emissiveIntensity: 0.4 });
       const casing = new THREE.Mesh(casingGeo, casingMat);
       casing.position.set(x, 0.6, z);
-      cylinderGroup.add(casing);
+      cylGroup.add(casing);
 
-      // Bullet tip (cone)
       const tipGeo = new THREE.ConeGeometry(0.13, 0.25, 16);
-      const tipMat = new THREE.MeshStandardMaterial({
-        color: 0xcc8800,
-        roughness: 0.2,
-        metalness: 0.9
-      });
+      const tipMat = new THREE.MeshStandardMaterial({ color: 0xcc8800, roughness: 0.2, metalness: 0.9 });
       const tip = new THREE.Mesh(tipGeo, tipMat);
       tip.position.set(x, 0.95, z);
-      cylinderGroup.add(tip);
+      cylGroup.add(tip);
     }
 
-    // Add some decorative rings on the chamber
     const ringGeo = new THREE.TorusGeometry(0.88, 0.05, 16, 64);
-    const ringMat = new THREE.MeshStandardMaterial({
-      color: 0xffb347,
-      roughness: 0.3,
-      metalness: 0.7,
-      emissive: 0x331100,
-      emissiveIntensity: 0.5
-    });
+    const ringMat = new THREE.MeshStandardMaterial({ color: 0xffb347, roughness: 0.3, metalness: 0.7, emissive: 0x331100, emissiveIntensity: 0.5 });
     const ring1 = new THREE.Mesh(ringGeo, ringMat);
     ring1.position.y = 0.7;
     ring1.rotation.x = Math.PI / 2;
-    cylinderGroup.add(ring1);
+    cylGroup.add(ring1);
     const ring2 = new THREE.Mesh(ringGeo, ringMat);
     ring2.position.y = -0.7;
     ring2.rotation.x = Math.PI / 2;
-    cylinderGroup.add(ring2);
+    cylGroup.add(ring2);
 
-    // Add a subtle glow using a point light inside the group (doesn't move with group, so we'll add separately)
-    scene.add(cylinderGroup);
+    scene.add(cylGroup);
 
-    // Extra floating particles (design sparks)
+    // Floating particles
     const particlesGeo = new THREE.BufferGeometry();
     const particlesCount = 300;
     const posArray = new Float32Array(particlesCount * 3);
@@ -437,95 +623,170 @@
       posArray[i] = (Math.random() - 0.5) * 8;
     }
     particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    const particlesMat = new THREE.PointsMaterial({
-      size: 0.03,
-      color: 0xffb347,
-      blending: THREE.AdditiveBlending,
-      transparent: true,
-      depthWrite: false
-    });
+    const particlesMat = new THREE.PointsMaterial({ size: 0.03, color: 0xffb347, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false });
     const particles = new THREE.Points(particlesGeo, particlesMat);
     scene.add(particles);
 
-    // Mouse interaction variables
+    // Mouse interaction
     const mouse = { x: 0, y: 0 };
-    window.addEventListener('mousemove', (event) => {
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
     });
 
-    // Resize handler
     window.addEventListener('resize', () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // Animation loop
-    function animate() {
-      requestAnimationFrame(animate);
-
-      // Rotate cylinder group continuously
-      cylinderGroup.rotation.y += 0.005;
-
-      // Interactive tilt: follow mouse with gentle easing
-      const targetRotX = mouse.y * 0.5;
-      const targetRotZ = mouse.x * 0.3;
-      cylinderGroup.rotation.x += (targetRotX - cylinderGroup.rotation.x) * 0.05;
-      cylinderGroup.rotation.z += (targetRotZ - cylinderGroup.rotation.z) * 0.05;
-
-      // Particles float slowly
+    function animate3D() {
+      requestAnimationFrame(animate3D);
+      cylGroup.rotation.y += 0.005;
+      const targetX = mouse.y * 0.5;
+      const targetZ = mouse.x * 0.3;
+      cylGroup.rotation.x += (targetX - cylGroup.rotation.x) * 0.05;
+      cylGroup.rotation.z += (targetZ - cylGroup.rotation.z) * 0.05;
       particles.rotation.y += 0.0002;
       particles.rotation.x += 0.0001;
-
       renderer.render(scene, camera);
     }
-
-    animate();
+    animate3D();
   </script>
 
-  <!-- Simple form handling (opens mailto as fallback; recommend Formspree for real submission) -->
+  <!-- Cursor Trail Script -->
   <script>
-    const form = document.getElementById('purchase-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+    (function() {
+      const canvas = document.getElementById('cursor-trail');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      const trail = [];
+      const maxTrail = 40;
+      let mouseX = -100, mouseY = -100;
 
-      // Gather data
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
+      window.addEventListener('resize', resize);
+      resize();
 
-      // Quick validation
-      if (!name || !email || !phone || !message) {
-        alert('Please fill in all required fields.');
-        return;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function draw() {
+        trail.push({ x: mouseX, y: mouseY, age: 0 });
+        if (trail.length > maxTrail) trail.shift();
+
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < trail.length; i++) {
+          const point = trail[i];
+          point.age++;
+          const alpha = Math.max(0, 1 - point.age / maxTrail);
+          const size = 8 * alpha;
+          ctx.beginPath();
+          ctx.arc(point.x, point.y, size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,179,71,${alpha * 0.7})`;
+          ctx.shadowColor = `rgba(255,107,107,${alpha * 0.8})`;
+          ctx.shadowBlur = 15 * alpha;
+          ctx.fill();
+        }
+        ctx.shadowBlur = 0;
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+  </script>
+
+  <!-- Form Handler (now uses Formspree, no mailto fallback) -->
+  <script>
+    (function() {
+      const form = document.getElementById('purchase-form');
+      const responseDiv = document.getElementById('form-response-msg');
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        // Clear previous message
+        responseDiv.style.display = 'none';
+
+        // Basic validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !phone || !message) {
+          responseDiv.style.display = 'block';
+          responseDiv.style.color = '#ff6b6b';
+          responseDiv.style.borderColor = '#ff6b6b';
+          responseDiv.style.background = 'rgba(255,107,107,0.1)';
+          responseDiv.textContent = 'Please fill in all required fields.';
+          return;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          responseDiv.style.display = 'block';
+          responseDiv.style.color = '#ff6b6b';
+          responseDiv.style.borderColor = '#ff6b6b';
+          responseDiv.style.background = 'rgba(255,107,107,0.1)';
+          responseDiv.textContent = 'Please enter a valid email address.';
+          return;
+        }
+
+        // Show loading state
+        responseDiv.style.display = 'block';
+        responseDiv.style.color = '#ffb347';
+        responseDiv.style.borderColor = '#ffb347';
+        responseDiv.style.background = 'rgba(255,179,71,0.1)';
+        responseDiv.textContent = 'Sending your inquiry...';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            responseDiv.style.color = '#25d366';
+            responseDiv.style.borderColor = '#25d366';
+            responseDiv.style.background = 'rgba(37,211,102,0.1)';
+            responseDiv.textContent = 'Thank you! Your inquiry has been sent successfully. We’ll be in touch soon.';
+            form.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          responseDiv.style.color = '#ff6b6b';
+          responseDiv.style.borderColor = '#ff6b6b';
+          responseDiv.style.background = 'rgba(255,107,107,0.1)';
+          responseDiv.textContent = 'Oops! Something went wrong. Please try again or use the direct contact options below.';
+        }
+
+        // Hide message after some seconds
+        setTimeout(() => {
+          responseDiv.style.display = 'none';
+        }, 8000);
       }
 
-      // --- Replace the email below with YOUR real contact email ---
-      const yourEmail = 'your-email@example.com'; // <-- CHANGE THIS
+      form.addEventListener('submit', handleSubmit);
 
-      const subject = `DesignSlinger.com Purchase Inquiry from ${name}`;
-      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AMessage: ${message}`;
-
-      // Open default email client with pre-filled data
-      window.location.href = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-      // Optional: clear form or show confirmation
-      alert('Thank you! Your email client will open to send the inquiry. Please double-check and send it.');
-      form.reset();
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
       });
-    });
+    })();
   </script>
 </body>
 </html>
