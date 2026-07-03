@@ -1,2 +1,2 @@
-# designslinger.com   Open tfor Sale!! 
+# designslinger.com   Open for Sale!! 
 
